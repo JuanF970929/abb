@@ -38,7 +38,7 @@ async def update_pet(id: int, pet: Pet, response: Response):
         return {"message": e.args[0]}
 
 @abb_route.delete("/{id}")
-async def delete_pet(id: int, response: Response):
+async def delete_pet(id: int, pet:Pet, response: Response):
     try:
         abb_service.abb.delete(id)
         return {"message": "Eliminado exitosamente"}
