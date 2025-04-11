@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "f8dc4df9-8ec2-48ce-99f8-67b9a68ec560",
+		"name": "pets",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42599866"
+	},
+	"item": [
+		{
+			"name": "list pets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/abb",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"abb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add pet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n            \"id\": -8,\r\n            \"name\": \"PANCCHO\",\r\n            \"age\": 12\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/abb",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"abb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update pet",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n            \"id\": 55,\r\n            \"name\": \"lila\",\r\n            \"age\": 18,\r\n            \"breed\": \"pomerania\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/abb/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"abb",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete pet",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 4    \r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/abb",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"abb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/abb",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"abb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list inOrder",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/abb/inorder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"abb",
+						"inorder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListPreorder",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 34,\r\n        \"name\": \"lolo\",\r\n        \"age\": 7,\r\n        \"breed\": \"salchicha\",\r\n        \"location\": \"MANIZALES\",\r\n        \"gender\": \"M\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/abb/preorder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"abb",
+						"preorder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListPostOrder",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "id repetido",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Contar raza",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "localidad_genero",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
