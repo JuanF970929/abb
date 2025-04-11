@@ -24,6 +24,7 @@ async def get_pet_by_id(id: int):
     except Exception as e:
         raise HTTPException(status_code=404, detail=str(e))
 
+
 @abb_route.get("/report/location_gender")
 async def report_by_location_and_gender():
     return abb_service.abb.report_by_location_and_gender()

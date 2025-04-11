@@ -34,17 +34,17 @@ class ABB():
 
     def find_by_id(self, id: int):
         if self.root is None:
-            raise Exception("Árbol vacío")
+            raise Exception("No existen mascotas en el listado")
         return self.root.find_by_id(id)
 
     def preorder(self):
         if self.root is None:
-            raise Exception("Árbol vacío")
+            raise Exception("No existen mascotas en el listado")
         return self.root.preorder()
 
     def postorder(self):
         if self.root is None:
-            raise Exception("Árbol vacío")
+            raise Exception("No existen mascotas en el listado")
         return self.root.postorder()
 
     def count_by_breed(self):
@@ -212,6 +212,22 @@ class NodeABB:
         if self.right != None:
             listPets.append(self.right.inorder())
         return listPets
+    def preorder(self):
+        pets = [self.pet]
+        if self.left:
+            pets.extend(self.left.preorder())
+        if self.right:
+            pets.extend(self.right.preorder())
+        return pets
+
+    def postorder(self):
+        pets = []
+        if self.left:
+            pets.extend(self.left.postorder())
+        if self.right:
+            pets.extend(self.right.postorder())
+        pets.append(self.pet)
+        return pets
 
 
 class NodeAVL(NodeABB):
